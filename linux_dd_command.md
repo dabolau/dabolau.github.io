@@ -1,5 +1,5 @@
-使用dd命令制作linux系统启动盘
-===
+# 使用dd命令制作linux系统启动盘
+
 ```linux
 # 查出u盘名称及路径（/dev/sdc1）
 df -h
