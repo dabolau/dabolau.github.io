@@ -65,3 +65,27 @@ Options:
 ```
 
 ## 配置文件详解
+
+### 虚拟主机基本配置
+
+```linux
+# 虚拟主机
+server {
+  # 监听端口
+  listen          80;
+  # 访问域名
+  server_name     demo.com;
+  # 编码格式，若网页格式不同，将被自动转码
+  charset         utf-8;
+  # 虚拟主机访问日志
+  access_log      /home/dabolau/demo/logs/access.log;
+  error_log       /home/dabolau/demo/logs/error.log;
+  # 对url进行匹配
+  location / {
+    # 访问路径，可以是相对路径也可以是绝对路径
+    root    /home/dabolau/demo;
+    # 首页文件，按先后顺序匹配
+    index   index.html index.htm;
+  }
+}
+```
