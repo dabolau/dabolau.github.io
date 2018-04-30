@@ -113,6 +113,9 @@ server {
   listen 443 ssl;
   # 访问域名
   server_name demo.com;
+  # 证书配置
+  ssl_certificate /etc/letsencrypt/live/demo.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/demo.com/privkey.pem;
   # 编码格式，若网页格式不同，将被自动转码
   charset utf-8;
   # 虚拟主机访问日志
