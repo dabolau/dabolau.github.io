@@ -66,26 +66,64 @@ Options:
 
 ## 配置文件详解
 
-### 虚拟主机基本配置
+### 虚拟主机基本配置（HTTP）
 
 ```linux
 # 虚拟主机
 server {
   # 监听端口
-  listen          80;
+  listen 80;
   # 访问域名
-  server_name     demo.com;
+  server_name demo.com;
   # 编码格式，若网页格式不同，将被自动转码
-  charset         utf-8;
+  charset utf-8;
   # 虚拟主机访问日志
-  access_log      /home/dabolau/demo/logs/access.log;
-  error_log       /home/dabolau/demo/logs/error.log;
+  access_log /home/dabolau/demo/log/access.log;
+  error_log /home/dabolau/demo/log/error.log;
   # 对url进行匹配
   location / {
     # 访问路径，可以是相对路径也可以是绝对路径
-    root    /home/dabolau/demo;
+    root /home/dabolau/demo;
     # 首页文件，按先后顺序匹配
-    index   index.html index.htm;
+    index index.html index.htm;
+  }
+}
+```
+
+### 虚拟主机基本配置（跳转）
+
+```linux
+# 虚拟主机
+server {
+  # 监听端口
+  listen 80;
+  # 访问域名
+  server_name www.demo.com;
+  # 跳转（301）
+  return 301 http://demo.com$request_uri;
+}
+```
+
+### 虚拟主机基本配置（HTTPS）
+
+```linux
+# 虚拟主机
+server {
+  # 监听端口
+  listen 443 ssl;
+  # 访问域名
+  server_name demo.com;
+  # 编码格式，若网页格式不同，将被自动转码
+  charset utf-8;
+  # 虚拟主机访问日志
+  access_log /home/dabolau/demo/log/access.log;
+  error_log /home/dabolau/demo/log/error.log;
+  # 对url进行匹配
+  location / {
+    # 访问路径，可以是相对路径也可以是绝对路径
+    root /home/dabolau/demo;
+    # 首页文件，按先后顺序匹配
+    index index.html index.htm;
   }
 }
 ```
