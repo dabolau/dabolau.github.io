@@ -12,9 +12,10 @@ npm -v
 ```
 3、用淘宝cnpm代替npm源
 ```linux
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
+sudo ln -s /opt/node/bin/cnpm /usr/local/bin/cnpm
 ```
 4、将node添加到环境变量中
 ```linux
-export PATH=$PATH:/opt/node/bin
+sudo export PATH=$PATH:/opt/node/bin
 ```
