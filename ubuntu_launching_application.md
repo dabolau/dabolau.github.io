@@ -2,6 +2,9 @@ ubuntu launching application
 ===
 
 1. 在桌面文件夹中创建一个datagrip.desktop的文件，其中datagrip为你的应用程序的名称
+```linux
+$ touch datagrip.desktop
+```
 
 2. 在文件中写入如下固定格式的内容
 ```linux
