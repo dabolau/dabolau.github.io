@@ -1,4 +1,4 @@
-ubuntu launching application
+ubuntu desktop launching application
 ===
 
 1. 在桌面文件夹中创建一个datagrip.desktop的文件，其中datagrip为你的应用程序的名称
