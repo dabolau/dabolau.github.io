@@ -197,7 +197,7 @@ rtmp {
 }
 ```
 
-9. 重启nginx，用浏览器打开 http://127.0.0.1/stat ，如果看到页面内容说明配置成功
+9. 重启nginx，用浏览器打开http://127.0.0.1/stat，如果看到页面内容说明配置成功
 ```linux
 sudo nginx -s reload
 curl http://127.0.0.1/stat

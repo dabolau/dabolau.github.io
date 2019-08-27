@@ -4,6 +4,7 @@ ubuntu_boot_up_software
 方法一（rc.local）：
 ---
 
+
 ```linux
 sudo nano /etc/rc.local
 ```
