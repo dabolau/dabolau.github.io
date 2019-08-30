@@ -40,3 +40,8 @@ $ sudo chmod 777 datagrip.desktop
 ```linux
 $ sudo cp datagrip.desktop /usr/share/applications/
 ```
+
+6. （可选）把启动应用程序放在起动器中在桌面文件夹中打开终端输入以下内容
+```linux
+$ sudo cp datagrip.desktop /home/dabolau/.local/share/applications/
+```
