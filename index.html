@@ -1,98 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 
 <head>
-  <title>DABOLAU.COM - OPEN SOURCE REPOSITORY</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>吾等斩去红尘时</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css">
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    #main {
+      /* width: 100px;
+      height: 100px; */
+      background: red;
+      animation: main_first 5s;
+      -moz-animation: main_first 5s;
+      /* Firefox */
+      -webkit-animation: main_first 5s;
+      /* Safari and Chrome */
+      -o-animation: main_first 5s;
+      /* Opera */
+    }
+
+    @keyframes main_first {
+      0% {
+        background: #ff9a9e;
+      }
+
+      25% {
+        background: #f6d365;
+      }
+
+      50% {
+        background: #a1c4fd;
+      }
+
+      100% {
+        background: #96e6a1;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!--STATIC NAVBAR-->
-  <nav class="navbar navbar-default navbar-fixed-top" style="background:#FFF" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">#</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        <a class="navbar-brand" href="/">DABOLAU.COM</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">SHARE</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="https://www.facebook.com/sharer.php?u=http://dabolau.com" target="_blank">FACEBOOK</a></li>
-              <li class="divider"></li>
-              <li><a href="https://twitter.com/intent/tweet?source=sharethiscom&url=http://dabolau.com" target="_blank">TWITTER</a></li>
-              <li class="divider"></li>
-              <li><a href="https://www.tumblr.com/share/link?url=http://dabolau.com" target="_blank">TUMBLR</a></li>
-              <li class="divider"></li>
-              <li><a href="https://plus.google.com/share?url=http://dabolau.com" target="_blank">GOOGLEPLUS</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!--STATIC NAVBAR-->
-  <!--JUMBOTRON-->
-  <div class="jumbotron" style="background:#FFF">
-    <div class="container text-center">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <h1>DABOLAU</h1>
-      <p>OPEN SOURCE REPOSITORY</p>
-      <br>
-      <br>
-      <br>
-      <a class="btn btn-default" href="https://github.com/dabolau/demo">FREE DOWNLOAD</a>
-      <br>
-      <br>
-      <code>Beautiful is better than ugly.</code>
-    </div>
-  </div>
-  <!--JUMBOTRON-->
-  <!--CONTAINER-->
   <div class="container">
-    <div class="row">
-      <!--TIPS-->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="alert alert-info alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-              <strong>Press CTRL+D now to bookmark my site for tommorrow! we both know you will need it :)</strong>
-            </div>
-          </div>
+    <h1 class="mt-5">吾等斩去红尘时</h1>
+    <hr>
+    <div class="container">
+      <div id="main" class="row justify-content-center bg-light" style="height: 300px">
+        <div class="align-self-center">
+          <h1 class="text-muted">Beautiful is better than ugly.</h1>
         </div>
       </div>
-      <!--TIPS-->
     </div>
-  </div>
-  <!--CONTAINER-->
-  <!--FOOTER-->
-  <div class="container">
+
+    <p class="mt-2">
+      我的名字叫刘毅，是一个独立的软件开发人员，我的大部分工作都是开源的，可以在程序员交友网站<a href="https://github.com">GitHub</a>上公开获得。
+    </p>
+    <p class="mt-2">
+      如果您碰巧会说中文，您也可以通过下面的联系方式找到我并和我交流。
+    </p>
+    <p class="mt-2">
+      除了编程和帮助我的<a href="wd.html">妻子</a>照顾我们的女儿外，我还非常喜欢网络游戏，音乐，吉他和喜剧电影。
+    </p>
+
+    <h2 class="mt-5">相关内容</h2>
     <hr>
-    <div>
-      <div style="float: left;">DABOLAU.COM</div>
-      <div style="float: right">OPEN SOURCE REPOSITORY</div>
-      <div style="clear: both;"></div>
-    </div>
+    <table class="table table-striped table-bordered">
+      <tr>
+        <td><a href="https://github.com/dabolau/demo">演示存储库</a></td>
+        <td><a href="https://github.com/dabolau/dabolau.github.io/tree/master/manual">使用手册</a></td>
+      </tr>
+    </table>
+
+    <h2 class="mt-5">联系方式</h2>
+    <hr>
+    <p>联系方式：<a href="ly_qrcode.png">扫码联系我</a></p>
   </div>
-  <br>
-  <br>
-  <!--FOOTER-->
 </body>
 
 </html>
