@@ -1,4 +1,4 @@
-# ubuntu_nginx_uwsgi_django
+# ubuntu_nginx_gunicorn_django
 
 ```linux
 #########
@@ -6,9 +6,9 @@
 #########
 sudo apt-get update
 sudo apt-get upgrade
-# 安装django和uwsgi所需要的库和nginx
+# 安装django和gunicorn所需要的库和nginx
 sudo apt-get install python3-dev python3-pip nginx gcc
-# 升级pip和安装django和uwsgi
+# 升级pip和安装django和gunicorn
 sudo pip3 install --upgrade pip
 sudo pip3 install django gunicorn
 ```
@@ -26,25 +26,41 @@ user dabolau;
 ################################
 # 在项目中创建demo_nginx.conf文件
 ################################
+# 定义服务器组
 upstream demo {
     server unix:/home/dabolau/demo/demo.sock fail_timeout=0;
 }
 
+# 虚拟主机
 server {
+    # 监听端口
     listen          80;
+    # 访问域名
     server_name     demo.com;
+    # 编码格式，若网页格式不同，将被自动转码
     charset         utf-8;
+    # 虚拟主机访问日志
     access_log      /home/dabolau/demo/logs/access.log;
     error_log      /home/dabolau/demo/logs/error.log;
+    # 对url进行匹配
     location / {
-              try_files $uri @proxy_to_demo;
+        # 重定向
+        try_files $uri @proxy_to_demo;
     }
-
+    # 配置静态文件
+    location /static/ {
+        alias /home/ubuntu/demo/static/;
+    }
+    # 配置媒体文件
+    location /media/ {
+        alias /home/ubuntu/demo/media/;
+    }
+    # 根据用户请求执行不同的应用
     location @proxy_to_demo {
-              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-              proxy_set_header Host $http_host;
-              proxy_redirect off;
-              proxy_pass http://demo;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        proxy_pass http://demo;
     }
 }
 ```
