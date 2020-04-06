@@ -1,37 +1,38 @@
 # letsencrypt_certbot
 
+0. 官方网站
 ```linux
-###
-# 安装certbot
-###
+https://certbot.eff.org/
+```
+
+1. 添加Certbot PPA
+```linux
 sudo apt-get update
 sudo apt-get install software-properties-common
+sudo add-apt-repository universe
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install python-certbot-nginx 
 ```
 
+2. 安装Certbot
 ```linux
-###
-# 生成证书
-###
-# 证书存放目录/etc/letsencrypt/live/demo.com/
-sudo certbot --nginx certonly -m demo@demo.com -d demo.com -d www.demo.com
+sudo apt-get install certbot python-certbot-nginx
 ```
 
+3. 选择您想如何运行Certbot
++ 获取并安装您的证书
 ```linux
-###
-# 续期证书
-###
-# 证书时效为90天，在快到期的30天内可以续期
-sudo certbot renew
-# 测试命令
+sudo certbot --nginx
+```
++ 只获取证书
+```linux
+sudo certbot certonly --nginx
+```
+
+4. 测试自动续订证书
++ 系统上的Certbot带有计时器会自动更新证书，您可以通过运行以下命令来测试证书的自动续订
+```linux
 sudo certbot renew --dry-run
 ```
 
-```linux
-###
-# 官方网站
-###
-https://certbot.eff.org/
-```
+
