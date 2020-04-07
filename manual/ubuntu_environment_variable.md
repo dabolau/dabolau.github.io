@@ -34,3 +34,30 @@ export PATH="$PATH:/opt/node/bin"
 ```linux
 $ source /etc/profile
 ```
+
+4. Flutter的环境变量配置
+```linux
+###
+# dart
+###
+export PATH="$PATH:/opt/flutter/bin/cache/dart-sdk/bin"
+
+###
+# Flutter
+###
+export PATH="$PATH:/opt/flutter/bin"
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+###
+# Android SDK
+###
+export ANDROID_HOME=/opt/android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+###
+# 管理员权限找不到命令时使用
+###
+alias sudo="sudo env PATH=$PATH"
+```
