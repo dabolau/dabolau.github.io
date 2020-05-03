@@ -4,21 +4,21 @@
 
 1. 临时设置
 ```linux
-export PATH="$PATH:/opt/node/bin"
+export PATH="$PATH:/home/dabolau/snap"
 ```
 
 2. 当前用户的全局设置
-+ 打开文件~/.profile
++ 打开文件~/.bashrc或者~/.profile
 ```linux
-$ nano .profile
+$ nano .bashrc
 ```
 + 在末尾添加行：
 ```linux
-export PATH="$PATH:/opt/node/bin"
+export PATH="$PATH:/home/dabolau/snap"
 ```
 + 使环境变量生效
 ```linux
-$ source .profile
+$ source .bashrc
 ```
 
 3. 所有用户的全局设置
@@ -28,7 +28,7 @@ $ nano /etc/profile
 ```
 + 在末尾添加行：
 ```linux
-export PATH="$PATH:/opt/node/bin"
+export PATH="$PATH:/home/dabolau/snap"
 ```
 + 使环境变量生效
 ```linux
@@ -40,24 +40,24 @@ $ source /etc/profile
 ###
 # dart
 ###
-export PATH="$PATH:/opt/flutter/bin/cache/dart-sdk/bin"
+export PATH="$PATH:/home/dabolau/snap/flutter/bin/cache/dart-sdk/bin"
 
 ###
 # Flutter
 ###
-export PATH="$PATH:/opt/flutter/bin"
+export PATH="$PATH:/home/dabolau/snap/flutter/bin"
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 ###
 # Android SDK
 ###
-export ANDROID_HOME=/opt/android/sdk
+export ANDROID_HOME=/home/dabolau/snap/android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 ###
-# 管理员权限找不到命令时使用
+# 管理员权限找不到命令时使用（可选）
 ###
 alias sudo="sudo env PATH=$PATH"
 ```
