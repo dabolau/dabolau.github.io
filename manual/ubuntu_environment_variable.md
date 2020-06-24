@@ -35,7 +35,7 @@ export PATH="$PATH:/home/dabolau/snap"
 $ source /etc/profile
 ```
 
-4. Flutter的环境变量配置
+4. 环境变量配置
 ```linux
 ###
 # nodejs
