@@ -38,9 +38,26 @@ $ source /etc/profile
 4. Flutter的环境变量配置
 ```linux
 ###
+# nodejs
+###
+export PATH="$PATH:/home/dabolau/snap/node/bin"
+
+###
+# golang
+###
+export PATH="$PATH:/home/dabolau/snap/go/bin"
+export GOROOT="/home/dabolau/snap/go"
+export GOPATH="/home/dabolau//snap/space/go"
+
+###
 # dart
 ###
 export PATH="$PATH:/home/dabolau/snap/flutter/bin/cache/dart-sdk/bin"
+
+###
+# dart package
+###
+export PATH="$PATH:$HOME/.pub-cache/bin"
 
 ###
 # Flutter
@@ -53,8 +70,8 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 # Android SDK
 ###
 export ANDROID_HOME=/home/dabolau/snap/android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ###
 # 管理员权限找不到命令时使用（可选）
