@@ -40,19 +40,19 @@ $ source /etc/profile
 ###
 # nodejs
 ###
-export PATH="$PATH:/home/dabolau/snap/node/bin"
+export PATH="$PATH:$HOME/snap/node/bin"
 
 ###
 # golang
 ###
-export PATH="$PATH:/home/dabolau/snap/go/bin"
-export GOROOT="/home/dabolau/snap/go"
-export GOPATH="/home/dabolau//snap/space/go"
+export GOROOT="$HOME/snap/go"
+export GOPATH="$HOME/snap/space/go"
+export PATH="$PATH:$GOROOT/bin"
 
 ###
 # dart
 ###
-export PATH="$PATH:/home/dabolau/snap/flutter/bin/cache/dart-sdk/bin"
+export PATH="$PATH:$HOME/snap/flutter/bin/cache/dart-sdk/bin"
 
 ###
 # dart package
@@ -62,16 +62,16 @@ export PATH="$PATH:$HOME/.pub-cache/bin"
 ###
 # Flutter
 ###
-export PATH="$PATH:/home/dabolau/snap/flutter/bin"
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PATH="$PATH:$HOME/snap/flutter/bin"
+export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 ###
 # Android SDK
 ###
-export ANDROID_HOME=/home/dabolau/snap/android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME="$HOME/snap/android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 ###
 # 管理员权限找不到命令时使用（可选）
