@@ -8,7 +8,8 @@
 
 专用名词的译名如下:
 
-
+|名词|译名|
+|-|-|
 |Workspace|工作区|
 |Index / Stage|暂存区|
 |Repository|仓库/或本地仓库|
