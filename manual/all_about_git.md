@@ -1,14 +1,14 @@
 # Git常用命令
 
 我每天使用 Git ，但是很多命令记不住。
+
 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要记住60～100个命令。
 
 ![git](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015120901.png)
 
 专用名词的译名如下:
 
-|||
-|-|-|
+
 |Workspace|工作区|
 |Index / Stage|暂存区|
 |Repository|仓库/或本地仓库|
