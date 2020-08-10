@@ -4,7 +4,7 @@
 
 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要记住60～100个命令。
 
-![git](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015120901.png)
+![git](./images/git.png)
 
 专用名词的译名如下:
 
