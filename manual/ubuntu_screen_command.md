@@ -1,4 +1,4 @@
-# linux_screen_command
+# ubuntu_screen_command
 
 1. 安装命令
 ```bash

@@ -4,7 +4,7 @@
 
 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要记住60～100个命令。
 
-![git](./images/git.png)
+![git](./all_about_git/git.png)
 
 专用名词的译名如下:
 
@@ -115,6 +115,9 @@ $ git checkout [branch-name]
 
 # 切换到上一个分支
 $ git checkout -
+
+# 切换到指定分支
+$ git switch [branch-name]
 
 # 建立追踪关系，在现有分支与指定的远程分支之间
 $ git branch --set-upstream [branch] [remote-branch]
@@ -289,10 +292,26 @@ $ git stash
 $ git stash pop
 ```
 
+### 忽略文件
+
+```bash
+# 忽略文件，首先创建.gitignore文件，将要忽略的文件逐行写入到.gitignore文件里
+# 各种语言忽略文件参考https://github.com/github/gitignore
+$ git config [--global] core.excludesFile .gitignore
+```
+
+### 别名
+
+```bash
+# 配置别名
+$ git config [--global] alias.[alias] [command]
+```
+
 ### 其他
+
 ```bash
 # 生成一个可供发布的压缩包
 $ git archive
 ```
 
-以上命令转载自阮一峰的[《常用Git命令清单》](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+以上命令部分转载自阮一峰的[《常用Git命令清单》](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
